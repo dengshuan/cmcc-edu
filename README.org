@@ -19,7 +19,7 @@
    # To log out CMCC-EDU
    python cmcc_edu.py logout
    #+END_EXAMPLE
-* TODO
-** 判断接入的 WIFI 是否是 *CMCC-EDU*
-** 加入图形界面
-** 加入定时查询是否在线，掉线自动重连功能
+* Todo
+  + 判断接入的 WIFI 是否是 *CMCC-EDU*
+  + 加入图形界面
+  + 加入定时查询是否在线，掉线自动重连功能
