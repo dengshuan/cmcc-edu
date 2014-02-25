@@ -1,0 +1,25 @@
+* CMCC-EDU 简易客户端
+
+  网页登录 CMCC-EDU 浏览器总是不能自动加载 *input.do* 和样式
+  *style.css* ，每次都手动点击加载不安全脚本，如果关闭了登录成功页面，
+  就找不到下线页面了，使用进来非常麻烦，所以就有了这个脚本用来登录和下
+  线。
+
+* 安装使用方法
+** 安装
+  #+BEGIN_EXAMPLE
+  pip install --user requests
+  #+END_EXAMPLE
+  下载脚本 *cmcc_edu.py*
+** 使用
+   #+BEGIN_EXAMPLE
+   # To login CMCC-EDU
+   python cmcc_edu.py login
+   
+   # To log out CMCC-EDU
+   python cmcc_edu.py logout
+   #+END_EXAMPLE
+* TODO
+** 判断接入的 WIFI 是否是 *CMCC-EDU*
+** 加入图形界面
+** 加入定时查询是否在线，掉线自动重连功能
