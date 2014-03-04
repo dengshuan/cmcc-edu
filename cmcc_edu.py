@@ -21,6 +21,7 @@ if url == baidu:
 else:
     print '正在登录...'
     domain, args_url = url.split('?')
+    wlanacssid = 'CMCC-EDU'     # for CMCC-EDU, ssid is always CMCC-EDU
     args = args_url.split('&')
     for arg in args:
         if arg.split('=')[0] == 'wlanuserip':
@@ -29,15 +30,15 @@ else:
             wlanacname = arg.split('=')[1]
         elif arg.split('=')[0] == 'wlanacip':
             wlanacip = arg.split('=')[1]
-        elif arg.split('=')[0] == 'wlanacssid':
-            wlanacssid = arg.split('=')[1]
+        # elif arg.split('=')[0] == 'wlanacssid':
+        #     wlanacssid = arg.split('=')[1]
     login_info = {
         'staticusername':username,
         'staticpassword':password,
         'wlanacname':wlanacname,
         'wlanuserip':wlanuserip,
         'loginmode':'static',
-        'wlanacssid':'CMCC-EDU'
+        'wlanacssid':wlanacssid
     }
     logout_info = {
         'username':username,
