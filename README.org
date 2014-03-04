@@ -12,6 +12,9 @@
   #+END_EXAMPLE
   下载脚本 *cmcc_edu.py*
 ** 使用
+   将 info_file, username, password 三个变量改成你自己的，其中
+   info_file 是登录成功后用来保存登录信息的，下线时会用到这些信息，建议
+   将其存到家目录的隐藏文件，比如 /home/user/.cmcc_info.json
    #+BEGIN_EXAMPLE
    # To login CMCC-EDU
    python cmcc_edu.py login
@@ -19,6 +22,12 @@
    # To log out CMCC-EDU
    python cmcc_edu.py logout
    #+END_EXAMPLE
+* 程序如何工作的
+  WIFI 连上 CMCC-EDU 后，访问任一网页时会自动跳转到一个登录页面，其
+  URL 中包含了 AC 的名字、IP，用户获取到的 IP 以及当前连接 WIFI 的
+  SSID 等信息，登录就是将这些信息加上用户的 username 和 password 一起
+  post 到 URL 中最前面的那个 IP 上去，请求的是 login，而下线就是将这些
+  信息同样再 post 到相同的 IP 上去，不过请求的是 logout。
 * Todo
   + 判断接入的 WIFI 是否是 *CMCC-EDU*
   + 加入图形界面
