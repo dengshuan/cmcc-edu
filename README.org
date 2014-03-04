@@ -14,7 +14,7 @@
 ** 使用
    将 info_file, username, password 三个变量改成你自己的，其中
    info_file 是登录成功后用来保存登录信息的，下线时会用到这些信息，建议
-   将其存到家目录的隐藏文件，比如 /home/user/.cmcc_info.json
+   将其存到家目录的隐藏文件，比如 =/home/user/.cmcc_info.json=
    #+BEGIN_EXAMPLE
    # To login CMCC-EDU
    python cmcc_edu.py login
