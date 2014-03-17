@@ -13,7 +13,7 @@ username = 'your telephone number'
 password = 'your static password'
 
 def get_info(site=baidu):
-    r = requests.get(site)
+    r = requests.get(site, verify=False)
     url = r.url
     if url == site:
         domain = ''
@@ -58,7 +58,10 @@ def login(domain,info):
     if domain:
         print '正在登录...'
         url = domain.replace('input', 'login')
-        r = requests.post(url,info)
+	# uncheck certificate,this is unsafe, as soon as CMCC-EDU 
+	# certificate be valid again, you should set verify=True for
+	# security
+        r = requests.post(url,info, verify=False)
         encoding = r.encoding
         content = r.content.decode(encoding)
         if '登录成功' in content:
@@ -71,7 +74,7 @@ def login(domain,info):
 
 def logout(domain,info):
     url = domain.replace('input', 'logout')
-    r = requests.post(url,info)
+    r = requests.post(url,info, verify=False)
     if r.status_code == 200:
 	print '成功下线！'
 
