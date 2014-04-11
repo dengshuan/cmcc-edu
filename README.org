@@ -28,7 +28,11 @@
   SSID 等信息，登录就是将这些信息加上用户的 username 和 password 一起
   post 到 URL 中最前面的那个 IP 上去，请求的是 login，而下线就是将这些
   信息同样再 post 到相同的 IP 上去，不过请求的是 logout。
-* Todo
-  + 判断接入的 WIFI 是否是 *CMCC-EDU*
-  + 加入图形界面
-  + 加入定时查询是否在线，掉线自动重连功能
+* UPDATE
+  1. /cmcc.py/ 去除了对 /requests/ 库的依赖，不用安装 /requests/ 库，直
+     接下载 /cmcc.py/ 脚本并将路径(=info_file=)、用户名(=username=)和密
+     码(=password=)修改成自己的就行；如果使用 /cmcc_edu.py/ 的话就需要
+     安装 /requests/ 库
+* DONE 去除对 /requests/ 第三方库的依赖
+* TODO 加入图形界面
+* TODO 让 /CMCC-EDU/ 和 /CMCC/ 都能登录
