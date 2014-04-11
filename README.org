@@ -33,6 +33,7 @@
      接下载 /cmcc.py/ 脚本并将路径(=info_file=)、用户名(=username=)和密
      码(=password=)修改成自己的就行；如果使用 /cmcc_edu.py/ 的话就需要
      安装 /requests/ 库
-* DONE 去除对 /requests/ 第三方库的依赖
-* TODO 加入图形界面
-* TODO 让 /CMCC-EDU/ 和 /CMCC/ 都能登录
+* Todo
+** DONE 去除对 /requests/ 第三方库的依赖
+** TODO 加入图形界面
+** TODO 让 /CMCC-EDU/ 和 /CMCC/ 都能登录
